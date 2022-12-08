@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>build.gradle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle</font>
+</center></td></tr></table>
+<pre><span class="s0">plugins {</span>
+    <span class="s0">id </span><span class="s1">'java'</span>
+    <span class="s0">id </span><span class="s1">'application'</span>
+    <span class="s0">id </span><span class="s1">'org.openjfx.javafxplugin' </span><span class="s0">version </span><span class="s1">'0.0.10'</span>
+    <span class="s0">id </span><span class="s1">'org.beryx.jlink' </span><span class="s0">version </span><span class="s1">'2.24.1'</span>
+<span class="s0">}</span>
+
+<span class="s0">group </span><span class="s1">'com.example'</span>
+<span class="s0">version </span><span class="s1">'1.0-SNAPSHOT'</span>
+
+<span class="s0">repositories {</span>
+    <span class="s0">mavenCentral()</span>
+<span class="s0">}</span>
+
+<span class="s0">ext {</span>
+    <span class="s0">junitVersion = </span><span class="s1">'5.8.1'</span>
+<span class="s0">}</span>
+
+<span class="s0">sourceCompatibility = </span><span class="s1">'11'</span>
+<span class="s0">targetCompatibility = </span><span class="s1">'11'</span>
+
+<span class="s0">tasks.withType(JavaCompile) {</span>
+    <span class="s0">options.encoding = </span><span class="s1">'UTF-8'</span>
+<span class="s0">}</span>
+
+<span class="s0">application {</span>
+    <span class="s0">mainModule = </span><span class="s1">'com.example.hcihifiprototype'</span>
+    <span class="s0">mainClass = </span><span class="s1">'com.example.hcihifiprototype.HelloApplication'</span>
+<span class="s0">}</span>
+
+<span class="s0">javafx {</span>
+    <span class="s0">version = </span><span class="s1">'11.0.2'</span>
+    <span class="s0">modules = [</span><span class="s1">'javafx.controls'</span><span class="s0">, </span><span class="s1">'javafx.fxml'</span><span class="s0">]</span>
+<span class="s0">}</span>
+
+<span class="s0">dependencies {</span>
+
+    <span class="s0">testImplementation(</span><span class="s1">&quot;org.junit.jupiter:junit-jupiter-api:</span><span class="s0">${junitVersion}</span><span class="s1">&quot;</span><span class="s0">)</span>
+    <span class="s0">testRuntimeOnly(</span><span class="s1">&quot;org.junit.jupiter:junit-jupiter-engine:</span><span class="s0">${junitVersion}</span><span class="s1">&quot;</span><span class="s0">)</span>
+<span class="s0">}</span>
+
+<span class="s0">test {</span>
+    <span class="s0">useJUnitPlatform()</span>
+<span class="s0">}</span>
+
+<span class="s0">jlink {</span>
+    <span class="s0">imageZip = project.file(</span><span class="s1">&quot;</span><span class="s0">${buildDir}</span><span class="s1">/distributions/app-</span><span class="s0">${javafx.platform.classifier}</span><span class="s1">.zip&quot;</span><span class="s0">)</span>
+    <span class="s0">options = [</span><span class="s1">'--strip-debug'</span><span class="s0">, </span><span class="s1">'--compress'</span><span class="s0">, </span><span class="s1">'2'</span><span class="s0">, </span><span class="s1">'--no-header-files'</span><span class="s0">, </span><span class="s1">'--no-man-pages'</span><span class="s0">]</span>
+    <span class="s0">launcher {</span>
+        <span class="s0">name = </span><span class="s1">'app'</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s0">jlinkZip {</span>
+    <span class="s0">group = </span><span class="s1">'distribution'</span>
+<span class="s0">}</span></pre>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="335.0" styleClass="background" stylesheets="@../../../Styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hcihifiprototype.SavedIngredients">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="Voracity" />
+      <Line endX="313.60003662109375" endY="72.30000305175781" layoutX="4.0" startX="12.29998779296875" startY="72.30000305175781" styleClass="border-line" />
+      <TextField fx:id="ingredientField" onAction="#add" prefHeight="26.0" prefWidth="186.0" styleClass="searchField" />
+      <ImageView fx:id="addButton" onMouseClicked="#add" styleClass="searchButton">
+         <image>
+            <Image url="@../../../Images/Add_square_light.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" styleClass="backButton" text="Back" />
+      <VBox fx:id="listVBox" layoutX="54.0" layoutY="160.0" prefHeight="340.0" prefWidth="228.0" styleClass="displayVBox" />
+   </children>
+</AnchorPane>

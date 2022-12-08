@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="335.0" styleClass="background" stylesheets="@../../../Styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hcihifiprototype.SavedInfo">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="Voracity" />
+      <Line endX="313.60003662109375" endY="72.30000305175781" layoutX="4.0" startX="12.29998779296875" startY="72.30000305175781" styleClass="border-line" />
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" styleClass="backButton" text="Back" />
+      <Pane layoutY="25.0" prefHeight="200.0" prefWidth="200.0" styleClass="checkbox-grouping">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Home Address:" />
+            <TextField layoutX="14.0" layoutY="40.0" styleClass="other-text-box" />
+            <Text layoutX="14.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Preferred Price Range (per meal):" />
+            <VBox layoutX="14.0" layoutY="107.80000305175781" styleClass="info-check-grouping">
+               <children>
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="\$10-15" />
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="\$15-20" />
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="\$20-25" />
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="\$25+" />
+               </children>
+            </VBox>
+            <Text layoutX="14.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Method of Transportation:" />
+            <VBox layoutX="14.0" layoutY="240.0" styleClass="info-check-grouping">
+               <children>
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="Car" />
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="Bus/Train" />
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="Bike" />
+                  <CheckBox mnemonicParsing="false" styleClass="special-check" text="Walking" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

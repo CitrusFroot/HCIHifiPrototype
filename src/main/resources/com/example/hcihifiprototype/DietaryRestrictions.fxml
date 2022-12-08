@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="335.0" styleClass="background" stylesheets="@../../../Styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hcihifiprototype.DietaryRestrictions">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="Voracity" />
+      <Line endX="313.60003662109375" endY="72.30000305175781" layoutX="4.0" startX="12.29998779296875" startY="72.30000305175781" styleClass="border-line" />
+      <VBox styleClass="checkbox-grouping">
+         <children>
+            <CheckBox mnemonicParsing="false" styleClass="check-box-M" text="Vegetarian" />
+            <CheckBox mnemonicParsing="false" styleClass="check-box-M" text="Vegan" />
+            <CheckBox mnemonicParsing="false" styleClass="check-box-M" text="Kosher" />
+            <CheckBox mnemonicParsing="false" styleClass="check-box-M" text="Halal" />
+            <CheckBox mnemonicParsing="false" styleClass="check-box-M" text="Gluten Free" />
+            <CheckBox mnemonicParsing="false" styleClass="check-box-M" text="Nut Free" />
+            <CheckBox mnemonicParsing="false" styleClass="check-box-M" text="Sugar Free" />
+            <CheckBox fx:id="otherBox" mnemonicParsing="false" onAction="#enableTextbox" styleClass="check-box-M" text="Other" />
+            <TextField fx:id="otherField" disable="true" styleClass="other-text-box" />
+         </children>
+      </VBox>
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" styleClass="backButton" text="Back" />
+   </children>
+</AnchorPane>

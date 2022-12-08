@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="335.0" styleClass="background" stylesheets="@../../../Styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hcihifiprototype.GroceryStores">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="Voracity" />
+      <Line endX="313.60003662109375" endY="72.30000305175781" layoutX="4.0" startX="12.29998779296875" startY="72.30000305175781" styleClass="border-line" />
+      <ImageView fitHeight="290.0" fitWidth="290.0" layoutX="22.0" layoutY="111.0" styleClass="map-image">
+         <image>
+            <Image url="@../../../Images/Screenshot%202022-12-06%20204717.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="77.0" layoutY="234.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="146.0" layoutY="162.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="156.0" layoutY="142.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="248.0" layoutY="132.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="120.0" layoutY="244.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="146.0" layoutY="244.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="193.0" layoutY="182.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="193.0" layoutY="234.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="183.0" layoutY="254.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="136.0" layoutY="274.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="87.0" layoutY="244.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="146.0" layoutY="300.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="39.0" layoutY="378.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="87.0" layoutY="346.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="110.0" layoutY="326.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="136.0" layoutY="356.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Circle fill="DODGERBLUE" layoutX="293.0" layoutY="356.0" onMouseClicked="#popup" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle" />
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" styleClass="backButton" text="Back" />
+      <Pane fx:id="popupWindow" layoutX="28.0" layoutY="114.0" prefHeight="281.0" prefWidth="260.0" styleClass="popup-window" visible="false">
+         <children>
+            <Text layoutX="79.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="popup-message" text="Shit's Bitchin'!" />
+            <Button fx:id="okButton" layoutX="115.0" layoutY="234.0" mnemonicParsing="false" onAction="#closePopup" styleClass="confirmation-button" text="Ok!" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
